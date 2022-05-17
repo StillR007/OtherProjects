@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-family: cursive, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  border-style: none;
+}
+
+button {
+  position: relative;
+  color: currentColor;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button:hover {
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button :focus,
+button :active {
+  outline: none;
+}
+
+html {
+  overflow-anchor: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --grid-columns: repeat(3, 1fr) 70px;
+  --gap: 20px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap) 0;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+  grid-gap: var(--gap);
+  width: 100%;
+}
+
+.contact-all {
+  margin-top: var(--gap);
+}
+
+.contact-all:not(:first-child) > .contact-table {
+  display: none;
+}
+
+.contact-all:first-child {
+  margin-bottom: var(--gap);
+}
+
+.contact-table {
+  font-size: inherit;
+  text-align: center;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+  height: 40px;
+  grid-gap: var(--gap);
+}
+
+input {
+  display: block;
+  -webkit-box-shadow: rgba(35, 113, 187, 0.05) 0 7px 100px 0, rgba(97, 120, 141, 0.05) 0 2px 10px 0, rgba(97, 120, 141, 0.1) 0 10px 50px 0;
+          box-shadow: rgba(35, 113, 187, 0.05) 0 7px 100px 0, rgba(97, 120, 141, 0.05) 0 2px 10px 0, rgba(97, 120, 141, 0.1) 0 10px 50px 0;
+  padding: 0.8125rem 1.25rem;
+  font-size: inherit;
+  font-weight: 500;
+  color: #4e4e50;
+  background-clip: padding-box;
+  border: 1px solid #dde3e8;
+  border-radius: 0.25rem;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input::-webkit-input-placeholder {
+  font-size: inherit;
+  font-weight: 400;
+  color: #a7a9b2;
+}
+
+input::-moz-placeholder {
+  font-size: inherit;
+  font-weight: 400;
+  color: #a7a9b2;
+}
+
+input:-ms-input-placeholder {
+  font-size: inherit;
+  font-weight: 400;
+  color: #a7a9b2;
+}
+
+input::-ms-input-placeholder {
+  font-size: inherit;
+  font-weight: 400;
+  color: #a7a9b2;
+}
+
+input::placeholder {
+  font-size: inherit;
+  font-weight: 400;
+  color: #a7a9b2;
+}
+
+.change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.add {
+  background-image: url("/img/add-icon.svg");
+}
+
+.edit {
+  background-image: url("/img/edit-icon.svg");
+}
+
+.edit.active {
+  background-image: url("/img/save-icon.svg");
+}
+
+.remove {
+  background: red;
+  background-image: url("/img/delete-icon.svg");
+}
+
+.add,
+.edit {
+  background-color: #fff;
+}
+
+.remove,
+.add,
+.edit {
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+
+#add-new-contact {
+  width: 100%;
+  height: 40px;
+  margin-top: var(--gap);
+  background: #df5a5a;
+  border-radius: 15px;
+  background-image: url("/img/add-icon.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+  main {
+    width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --grid-columns: 1;
+    --gap: 15px;
+    --grid-rows: repeat(4, 40px);
+  }
+
+  main {
+    width: calc(100vw - var(--gap) * 2);
+    padding: unset;
+  }
+
+  .contact {
+    grid-template-rows: var(--grid-rows);
+  }
+
+  .contact-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+
+  .contact-all:nth-child(n) > .contact-table {
+    width: 150px;
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    grid-template-rows: var(--grid-rows);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    text-align: left;
+  }
+
+  .change {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .remove {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --table-width: 85px;
+  }
+
+  .contact-all:nth-child(n) > .contact-table {
+    width: var(--table-width);
+  }
+
+  .contact {
+    position: relative;
+    width: calc(100% - var(--table-width));
+  }
+}
