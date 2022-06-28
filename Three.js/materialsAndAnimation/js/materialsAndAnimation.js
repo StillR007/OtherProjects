@@ -1,14 +1,14 @@
-function initStats(type) {
+/* function initStats(type) {
 	var panelType = (typeof type !== 'undefined' && type) && (!isNaN(type)) ? parseInt(type) : 0;
 	var stats = new Stats();
 	stats.showPanel(panelType); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild(stats.dom);
 	return stats;
-}
+} */
 
 function init() {
 	window.addEventListener('resize', onResize, false);
-	let stats = initStats();
+	//let stats = initStats();
 
 	// default setup
 	const scene = new THREE.Scene();
@@ -88,9 +88,9 @@ function init() {
 		this.bouncingSpeed = 0.03;
 	};
 
-	const gui = new dat.GUI();
+	/* const gui = new dat.GUI();
 	gui.add(controls, 'rotationSpeed', 0, 0.5);
-	gui.add(controls, 'bouncingSpeed', 0, 1);
+	gui.add(controls, 'bouncingSpeed', 0, 1); */
 
 
 	// attach them here, since appendChild needs to be called first
@@ -99,14 +99,14 @@ function init() {
 	trackballControls.zoomSpeed = 1.2;
 	trackballControls.panSpeed = 0.8;
 
-	const clock = new THREE.Clock();
+	//const clock = new THREE.Clock();
 
 	renderScene();
 
 	function renderScene() {
 		// update the stats and the controls
-		trackballControls.update(clock.getDelta());
-		stats.update();
+		//trackballControls.update(clock.getDelta());
+		//stats.update();
 
 		// rotate the cube around its axes
 		cube.rotation.x += controls.rotationSpeed;
