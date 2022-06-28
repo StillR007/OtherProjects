@@ -1,0 +1,66 @@
+@@include('html/head.html', {
+"title": "Test"
+})
+
+
+<form onsubmit="return false">
+	<section class="selects loading">
+		<div class="autoComplete_wrapper">
+			<input id="city_pickup_code" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off"
+				autocapitalize="on">
+		</div>
+
+		<div class="autoComplete_wrapper">
+			<input id="city_delivery_code" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off"
+				autocapitalize="off">
+		</div>
+	</section>
+
+	<section class="checkboxes">
+		<div class="checkbox__item">
+			<input id="pick_up" type="checkbox">
+			<label for="pick_up">Забор от отправителя</label>
+		</div>
+
+		<div class="checkbox__item">
+			<input id="delivery" type="checkbox">
+			<label for="delivery">Доставка до получателя</label>
+		</div>
+	</section>
+
+	<section class="inputs">
+		<div class="input__item">
+			<input type="number" id="weight" size="10" min="1" step="1" placeholder="Масса КГ позиции" required>
+			<label for="weight">Масса КГ позиции</label>
+		</div>
+
+		<div class="input__item">
+			<input type="number" id="volume" size="10" min="0.001" step="0.001" placeholder="Объем М³ позиции">
+			<label for="volume">Объем М³ позиции</label>
+		</div>
+
+		<div class="input__item">
+			<input type="number" id="length" size="10" min="0.01" step="0.01" placeholder="Длина груза (см) позиции">
+			<label for="length">Длина груза (см) позиции</label>
+		</div>
+
+		<div class="input__item">
+			<input type="number" id="height" size="10" min="0.01" step="0.01" placeholder="Высота груза (см) позиции">
+			<label for="height">Высота груза (см) позиции</label>
+		</div>
+
+		<div class="input__item">
+			<input type="number" id="width" size="20" min="0.01" step="0.01" placeholder="Ширина груза (см) позиции">
+			<label for="width">Ширина груза (см) позиции</label>
+		</div>
+	</section>
+
+	<section class="submit">
+		<button id="submit" type="submit" disabled>Рассчитать</button>
+		<p id="warningText">Введите данные</p>
+	</section>
+
+</form>
+
+
+@@include('html/footer.html')

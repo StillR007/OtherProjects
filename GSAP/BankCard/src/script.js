@@ -27,15 +27,14 @@ let mainFunc = () => {
 		request = requestAnimationFrame(updateMe)
 	})
 
-	gsap.registerPlugin(CSSPlugin)
+	// gsap.registerPlugin(CSSPlugin)
 
-	const tl = gsap.timeline()
+	/* const tl = gsap.timeline()
 		.set('svg', { opacity: 1 })
 		.set('.scratches', { rotation: 70, x: 450, y: -10 })
 		.set('#tri2', { scale: 0.5 })
 		.from('#cardMask rect', { scale: 0, rotation: -20, duration: 2, transformOrigin: '50% 50%', ease: 'expo.inOut' }, 0)
 		.to('#tri1', {
-			/* gsap.registerPlugin(MotionPathPlugin, TextPlugin) */
 			motionPath: {
 				path: "#midC",
 				align: "#midC",
@@ -66,7 +65,7 @@ let mainFunc = () => {
 	starShine = gsap.timeline()
 		.set('#star', { scale: 0, transformOrigin: '50% 50%', x: 2, y: 10 })
 		.to('#star', { scale: 1, repeat: 1, yoyo: true, yoyoEase: true, duration: 0.4, ease: 'power4' }, 0)
-		.fromTo('#star', { rotate: -20 }, { rotate: 120, duration: 0.8, ease: 'none' }, 0);
+		.fromTo('#star', { rotate: -20 }, { rotate: 120, duration: 0.8, ease: 'none' }, 0); */
 };
 
 document.addEventListener("DOMContentLoaded", function (event) {
