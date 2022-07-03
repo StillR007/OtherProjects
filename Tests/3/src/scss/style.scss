@@ -1,0 +1,27 @@
+.input-flex {
+	&:nth-child(odd) {
+		padding-right: 10px !important;
+	}
+
+	&:nth-child(even) {
+		padding-left: 10px !important;
+	}
+}
+
+.icon {
+	&:nth-child(2) {
+		margin-left: 15px;
+	}
+}
+
+@media (max-width: 992px) {
+	.input-flex {
+		&:nth-child(odd) {
+			padding-right: 0 !important;
+		}
+
+		&:nth-child(even) {
+			padding-left: 0 !important;
+		}
+	}
+}
